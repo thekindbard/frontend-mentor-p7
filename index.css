@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    font-family: Poppins;
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--very-light-gray);
+}
+
+:root {
+    --red:hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+
+header {
+    text-align: center;
+    min-width: 400px;
+    width: 30%;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+header strong {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+main {
+    display: flex;
+    width: min-content;
+    margin: auto;
+}
+
+main > div:last-child, main > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
+    margin: 15px;
+    border-radius: 4px;
+}
+
+.card h2 {
+    margin-top: 0px;
+    font-size: 1.2em;
+    color: var(--very-dark-blue);
+}
+
+.card img {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+div:nth-child(1) .card:nth-child(1) {
+    border-top: 3px solid var(--cyan);
+}
+
+div:nth-child(2) .card:nth-child(1) {
+    border-top: 3px solid var(--red);
+}
+
+div:nth-child(2) .card:nth-child(2) {
+    border-top: 3px solid var(--orange);
+}
+
+div:nth-child(3) .card:nth-child(1) {
+    border-top: 3px solid var(--blue);
+}
+
+header p, .card p {
+    color:var(--grayish-blue)
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:1200px) {
+    main {
+        flex-direction: column;
+    }
+}
